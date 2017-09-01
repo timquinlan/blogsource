@@ -1,0 +1,6 @@
+---
+- name: This will run all the playbooks in the project
+  hosts: webservers
+
+- include: server_config.yml
+- include: website.yml

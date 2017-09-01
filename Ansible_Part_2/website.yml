@@ -1,0 +1,12 @@
+- name: Enable Webservers
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Deploy the web page
+      copy:
+        src: ./index.html
+        dest: /var/www/html
+        owner: apache
+        group: apache
+        mode: 0644
+
